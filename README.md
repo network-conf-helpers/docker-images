@@ -15,11 +15,11 @@ bonds, VLAN, sub-networks, private networks, DMZ, as well as firewalls.
 
 The supported Linux distribution is currently
 [Debian 9 (Stretch)](https://www.debian.org/releases/stretch/),
-as that is the one on which [Proxmox](http://proxmox.org) relies.
+as that is the one on which [Proxmox](https://pve.proxmox.com) relies.
 Some other distributions may be supported in the future, for instance
 [CentOS 7](https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7),
-[Ubuntu 18.10 (Cosmic Cuttlefish)](http://releases.ubuntu.com/18.10/)
-and [Ubuntu 18.04 LTS (Bionic Beaver)](http://releases.ubuntu.com/18.04/).
+[Ubuntu 18.10 (Cosmic Cuttlefish)](https://releases.ubuntu.com/18.10/)
+and [Ubuntu 18.04 LTS (Bionic Beaver)](https://releases.ubuntu.com/18.04/).
 
 Every time some changes are committed on the [project's GitHub
 repository](https://github.com/network-conf-helpers/docker-images),
