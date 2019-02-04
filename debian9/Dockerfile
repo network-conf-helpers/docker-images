@@ -17,7 +17,10 @@ ENV LC_ALL $LANG
 RUN apt-get update && apt-get -y install locales apt-utils && apt-get -y upgrade
 
 # Generate the locales
-RUN locale-gen $LANG
+RUN echo "LC_ALL=$LC_ALL" >> /etc/environment && \
+    echo "$LC_ALL UTF-8" >> /etc/locale.gen && \
+    echo "LANG=$LANG" > /etc/locale.conf && \
+    locale-gen $LANG
 
 # Configure the time-zone
 RUN apt-get -y install tzdata && echo "Europe/Paris" > /etc/timezone && \
