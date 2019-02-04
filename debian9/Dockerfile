@@ -24,8 +24,8 @@ RUN apt-get -y install tzdata && echo "Europe/Paris" > /etc/timezone && \
 	dpkg-reconfigure -f noninteractive tzdata
 
 # Basic packages
-RUN apt-get -y install sudo less htop net-tools wget curl screen git \
-	keychain keyutils gawk bash-completion vim-nox emacs-nox apt-utils \
+RUN apt-get -y install sudo less htop net-tools wget curl screen git aptitude \
+	keychain keyutils gawk bash-completion vim-nox emacs-nox \
 	gzip tar lsb-release manpages
 	
 # Cleaning
