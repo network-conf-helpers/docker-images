@@ -45,28 +45,30 @@ available for every one to use.
 ```bash
 $ docker pull netconfhelpers/base:<linux-distrib>
 $ docker run --rm -v ~/.ssh/id_rsa:/home/build/.ssh/id_rsa -v ~/.ssh/id_rsa.pub:/home/build/.ssh/id_rsa.pub -it netconfhelpers/base:<linux-distrib>
-[root@5..0 dev]$ 
+root@5..0:~# 
 ```
 
 * Setup the user name and email address for Git:
 ```bash
-[root@5..0 dev]$ git config --global user.name "Firstname Lastname"
-[root@5..0 dev]$ git config --global user.email "email@example.com"
+root@5..0:~# git config --global user.name "Firstname Lastname"
+root@5..0:~# git config --global user.email "email@example.com"
 ```
 
 * Clone some network configuration helper project (_e.g._,
   [Network helper for Proxmox](https://github.com/network-conf-helpers/proxmox)
   is used as an example here):
 ```bash
-[root@5..0 dev]$ git clone https://github.com/network-conf-helpers/proxmox
-remote: Enumerating objects: 44, done.
-remote: Counting objects: 100% (44/44), done.
-remote: Compressing objects: 100% (35/35), done.
-Receiving objects: 100% (5813/5813), 61.53 MiB | 211.00 KiB/s, done.
-remote: Total 5813 (delta 12), reused 19 (delta 8), pack-reused 5769
-Resolving deltas: 100% (3665/3665), done.
-[root@5..0 dev]$ cd proxmox
-[root@5..0 proxmox (master)]$ 
+root@5..0:~# mkdir -p ~/dev && cd ~/dev
+root@5..0:~/dev# git clone https://github.com/network-conf-helpers/proxmox
+Cloning into 'proxmox'...
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 9 (delta 2), reused 9 (delta 2), pack-reused 0
+Unpacking objects: 100% (9/9), done.
+root@5..0:~# cd proxmox
+✔ ~/dev/proxmox [master|✔] 
+17:23 # ls -laFh --color etc/systemd/network/
 ```
 
 # Customize a Docker Image
@@ -80,7 +82,7 @@ $ cd network-conf-docker-images
 $ vi <linux-distrib>/Dockerfile
 $ docker build -t netconfhelpers/<linux-distrib>:beta --squash <linux-distrib>/
 $ docker run --rm -v ~/.ssh/id_rsa:/home/build/.ssh/id_rsa -v ~/.ssh/id_rsa.pub:/home/build/.ssh/id_rsa.pub -it netconfhelpers/<linux-distrib>:beta
-[root@9..d network-conf-helpers]$ exit
+root@5..0:~# exit
 $ docker push netconfhelpers/<linux-distrib>:beta
 ```
 
