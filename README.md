@@ -18,8 +18,8 @@ The supported Linux distribution is currently
 as that is the one on which [Proxmox](https://pve.proxmox.com) relies.
 Some other distributions may be supported in the future, for instance
 [CentOS 7](https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7),
-[Ubuntu 18.10 (Cosmic Cuttlefish)](https://releases.ubuntu.com/18.10/)
-and [Ubuntu 18.04 LTS (Bionic Beaver)](https://releases.ubuntu.com/18.04/).
+[Ubuntu 18.10 (Cosmic Cuttlefish)](http://releases.ubuntu.com/18.10/)
+and [Ubuntu 18.04 LTS (Bionic Beaver)](http://releases.ubuntu.com/18.04/).
 
 Every time some changes are committed on the [project's GitHub
 repository](https://github.com/network-conf-helpers/docker-images),
@@ -45,13 +45,13 @@ available for every one to use.
 ```bash
 $ docker pull netconfhelpers/base:<linux-distrib>
 $ docker run --rm -v ~/.ssh/id_rsa:/home/build/.ssh/id_rsa -v ~/.ssh/id_rsa.pub:/home/build/.ssh/id_rsa.pub -it netconfhelpers/base:<linux-distrib>
-[build@5..0 dev]$ 
+[root@5..0 dev]$ 
 ```
 
 * Setup the user name and email address for Git:
 ```bash
-[build@5..0 dev]$ git config --global user.name "Firstname Lastname"
-[build@5..0 dev]$ git config --global user.email "email@example.com"
+[root@5..0 dev]$ git config --global user.name "Firstname Lastname"
+[root@5..0 dev]$ git config --global user.email "email@example.com"
 ```
 
 * Clone some network configuration helper project (_e.g._,
